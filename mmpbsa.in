@@ -1,0 +1,31 @@
+# General namelist variables
+&general
+  # System name
+  sys_name             = "Proteina-ligante"
+  # First frame to analyze
+  startframe           = 1,
+  # Last frame to analyze
+  endframe             = 2000,
+  interval             = 1,
+  # How many energy terms to print in the final output
+  verbose              = 2,
+
+/
+
+# Generalized-Born namelist variables
+&gb
+  # GB model to use
+  igb                  = 5,
+  saltcon              = 0.150,
+/
+
+#&pb
+#istrng=0.15, fillratio=4.0,
+/
+
+&decomp
+idecomp=2, dec_verbose=3,
+# This will print all residues that are less than 4 Å between
+# the receptor and the ligand
+#print_res="within 4"
+/
